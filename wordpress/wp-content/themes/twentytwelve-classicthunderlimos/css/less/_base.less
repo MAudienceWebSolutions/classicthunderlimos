@@ -1,0 +1,462 @@
+
+/* -------------------------------------- GENERAL -------------------------------------- */
+
+	body { 
+		background-color: @child-color-black-lite;
+		font-family: Roboto, Arial, sans-serif;
+	}
+
+	#page { 
+		background-color: @child-background-color;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		max-width: none;
+		border-bottom: 2px solid #bcbdc0;
+	}
+
+	#masthead,
+	#main {
+		max-width: 960px;
+		width: 100%;
+		margin: auto;
+	}
+
+	hgroup {
+		margin-top: 10px;
+		background-image: @child-header-image;
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+	}
+
+	@media screen and (min-width: 600px) {
+		hgroup {	min-height: 120px; }
+	}
+
+	#primary, #secondary  { margin-top: 0; }
+	
+/* -------------------------------------- SHELL -------------------------------------- */
+
+	/* HEADER */
+	
+		.site-header h1 a,
+		.site-header h1 a:hover,
+		.site-header h2 { color: transparent; }
+
+		.post-banner-info {
+			margin: 25px;
+			text-align: center;
+			color: white;
+			font-size: 2rem;
+		}
+
+		.header-reservation-holder {
+			text-align: right;
+		}
+
+		.site-header { padding: 0; }
+	
+	/* NAVIGATION */
+	
+		.main-navigation {
+			margin: 35px 0 0;
+	
+			div.nav-menu>ul,
+			ul.nav-menu {
+					border: none;
+			}
+		
+			li {
+				border-right: 2px solid white;
+				margin: 0 1rem 0 0;
+				padding: 0 1rem 0 0;
+				text-align: center;
+			
+				&:first-of-type {
+					text-align: left;
+				}
+				
+				&:last-of-type {
+					border-right: none;
+					margin: 0;
+					padding: 0;
+					text-align: right;
+				}
+			
+				a { color: white; }
+			
+				a:hover,
+				&.current_page_item a,
+				&.current_page_parent a {
+					color: @child-color-red;
+					font-weight: normal;
+				}
+	
+				&.current_page_item a { font-weight: normal; }
+			
+				a,
+				a:hover {
+					font-size: 1.25rem;
+					line-height: 1.5rem;
+				}
+	
+				.sub-menu { display: none; }
+			}
+
+			.menu-toggle { width: 100%; }
+
+			ul.nav-menu.toggled-on {
+				width: 100%;
+
+				li {
+					width: 100%;
+					background-color: @child-color-grey;
+					text-align:center;
+					padding: 10px 0;
+
+					&:hover {
+						background-color: @child-color-red;
+						a { color: white; }
+					}
+
+					a { text-decoration: none; }
+				}
+			}
+		}
+
+		.social-media-navigation {
+			ul { }
+			
+			li {
+				display: inline-block;
+				height: 50px;
+				width: 50px;
+				vertical-align: top;
+				background-size: 100%;
+		
+				&:nth-of-type(1) { background-image: url('/wp-content/uploads/2015/04/ctl-limos-social-icon.png'); }
+				&:nth-of-type(2) { background-image: url('/wp-content/uploads/2015/04/ctl-knot-social-icon.png'); }
+				&:nth-of-type(3) { background-image: url('/wp-content/uploads/2015/04/ctl-rose-social-icon.png'); }
+				&:nth-of-type(4) { background-image: url('/wp-content/uploads/2015/04/ctl-facebook-social-icon.png'); }
+				&:nth-of-type(5) { background-color: @child-color-grey; border-radius: 50px; }
+		
+				&:nth-of-type(6) { background-image: url('/wp-content/uploads/2015/04/ctl-flowers-social-icon.png'); }
+				
+				a, a:hover { color: transparent; }
+			}
+		}
+
+	/* FOOTER */
+	
+		footer[role=contentinfo] {
+			background-color:	@child-color-black-lite;
+			color: white;
+			border-top: none;
+			margin-top: 0;
+			font-size: 1.5rem;
+			font-weight: 300;
+	
+			.site-info {
+				max-width: 960px;
+				width: 100%;
+				margin: auto;
+				text-align: center;
+			}
+	
+			.footer-contact-info {
+				a {
+					font-size: 1.25rem;
+					color: white;
+					text-decoration:none;
+				}
+			}
+		}
+
+	/* SIDEBAR */
+		
+		.widget-area {
+	
+			.widget .widget-title {
+				.pete-gradient(@child-color-grey-lite,@child-color-grey);
+				color: black;
+				text-transform: uppercase;
+				height: 50px;
+				max-height: 50px;
+				padding: 5px;
+				font-weight: 300;
+				font-size: 16px;
+				margin-bottom: 0;
+				line-height: 25px;
+			}
+	
+			.sidebar-info-widget {
+				  background-color: #b2b3b6;
+					margin: 15px 0;
+					padding: 30px 20px;
+					font-size: 1.1rem;
+					line-height: 2.5rem;
+		
+				span { color:@child-color-red; }
+			}
+	
+			.discount-section {
+				background-color: @child-color-red;
+				color: white;
+				padding: 5px 10px;
+				margin: 15px 0;
+				height: 80px;
+		
+					span { 
+						font-size: 3rem;
+						border-right: 1px solid white;
+						padding-right: 10px;
+						margin-right: 10px;
+						display:inline-block;
+					}
+		
+					p {
+						display:inline-block;
+						max-width: 50%;
+						text-transform: uppercase;
+					}
+			}
+		}
+
+	/*	SOLILOQUY SLIDER STYLES	*/
+
+		#soliloquy-container-195 {
+			max-width: none !important;
+			max-height: none !important;
+			border-top: 1px solid @child-color-red;
+			border-bottom: 1px solid @child-color-red;
+		}
+		
+		.soliloquy-container .soliloquy-image {
+			width: 100%;
+		}
+
+
+/* --------------------------------------	SHARED PAGE STYLES	-------------------------------------- */
+
+		@media screen and (min-width: 600px) {
+				.site-content {	width: 72% }
+		}
+		
+		.site-content article {
+			border-bottom: none;
+			margin-bottom: 0;
+			padding-bottom: 0;
+		}
+
+		.archive-header,
+		.entry-header {
+			margin-bottom: 15px;
+	
+			.archive-title,
+			.entry-title {
+				.pete-gradient(@child-color-grey-lite,@child-color-grey);
+				color: black;
+				text-transform: uppercase;
+				padding: 5px 10px;
+				height: 50px;
+				max-height: 50px;
+				line-height: 50px;
+			}
+		}
+
+		.entry-content {
+			background-color: @child-color-grey;
+			padding: 20px;
+			color: black;
+			min-height: 365px;
+			
+			h3 {
+			  font-size: 18px;
+  			font-weight: 400;	
+				margin-bottom: 0;
+				
+				&:first-of-type { margin-top: 0; }
+			}
+		}
+
+		//contact page entry content remove background
+		.page-id-15 .entry-content { background: transparent; }
+
+/* -------------------------------------- CUSTOM POST LIST FUNCTION STYLES -------------------------------------- */
+
+		.custom-post-type-list {
+			width: 100%;
+			text-align: center;
+
+			a {
+					text-decoration: none;
+					color: white;
+			}
+
+			li {
+				max-width: 200px;
+				list-style: none;
+				margin: 0 auto;
+				position: relative;
+				min-height: 325px;
+					margin-bottom: 25px;
+
+				.cpt-button-wrap {
+					position: absolute;
+					bottom: 0;
+					width: 100%;
+				}
+			}
+
+			.entry-page-image {
+					float: none; 
+					width: 100%; 				
+	
+					img {
+							max-width: 100%;
+					}
+			}
+
+			.post-image-wrap {
+				background-color: @child-color-grey;
+				padding: 5px 10px;
+				margin-bottom: 25px;
+	
+				> * {
+					display: block;
+					text-align: center;
+					padding: 5px;
+				}
+	
+				img { border-radius: 0; }
+			}
+
+			.custom-post-title {
+				color: @child-color-red;
+			}
+		}
+
+
+/* --------------------------------------	CONTACT FORM STYLES	 --------------------------------------	*/
+
+	.gform_wrapper {
+	
+		h3.gform_title {
+			color: white;
+			font-weight: normal;
+			font-style: italic;
+			font-size: 2rem;
+		}
+		
+		.top_label .gfield_label {
+				text-transform: uppercase;
+				color: white;
+				font-weight: 100;
+				font-style: italic;
+			}
+	
+		input[type=email],
+		input[type=number],
+		input[type=password],
+		input[type=tel],
+		input[type=text],
+		input[type=url],
+		textarea.medium {
+				background: @child-color-grey;
+				border-radius: 0;
+				border: none;
+			}
+	
+		.gfield_description { display: none; }
+	
+		ul#gform_fields_1,
+		ul#gform_fields_2 {
+			width: 45%;
+			display:inline-block;
+			vertical-align: top;
+			padding: 0 2.5%;
+			
+			li.gfield { 
+				width: 100%;
+				
+				input { 
+					width: 100%;
+					min-height: 30px;
+				}
+			}
+		}
+	
+	
+		//#field_1_6 {
+		//	
+		//	.ginput_container,
+		//	.gfield_label { display: inline-block; }
+		//	.ginput_container { margin-left: 10px; }
+		//
+		//}
+	
+		ul#gform_fields_1 #field_1_12,
+		ul#gform_fields_1 #field_1_13 {
+			width: 200px;
+			float: left;
+			display: inline-block;
+			clear: none;
+		
+		  select { width: 55px !important; }
+		}
+	
+		#gform_submit_button_1 {
+			.ctl-button;
+			font-size: 1.75rem;
+			line-height: 1.75rem;
+		
+			&:before,
+			&:after, {
+				display: none;
+				height: 23px;
+				width: 33px;
+				content: " ";
+				background-repeat: no-repeat;
+				background-size: 32px 23px;
+  				vertical-align: top;
+			}
+		
+			&:before {
+				background-image: url('/wp-content/themes/twentytwelve-classicthunderlimos/images/single-wing-icon-left.png');
+				margin-right: 5px;
+			}
+		
+			&:after { 
+				background-image: url('/wp-content/themes/twentytwelve-classicthunderlimos/images/single-wing-icon-right.png');
+				margin-left: 5px;
+			}
+		}
+	
+		.gform_footer {
+		  float: right;
+			width: 30%;
+			margin-top: -60px;
+			margin-right: 25px;
+		}
+	}
+
+/* --------------------------------------	PAGE SPECIFIC STYLES	 --------------------------------------	*/
+
+	/*	HOME PAGE STYLES	*/
+
+		.page-template-front-page {
+				.entry-content { 
+					background-color: transparent; 
+					color: @child-color-grey;
+		
+					a { color: white; }
+				}
+	
+				.custom-post-type-list li {
+						width: 95%;
+						//max-width: 200px;
+						//margin: 0 auto;
+						min-height: 375px;
+						// margin-bottom: 0;
+				}
+		}

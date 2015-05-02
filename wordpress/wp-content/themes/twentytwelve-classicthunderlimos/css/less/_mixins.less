@@ -1,0 +1,53 @@
+/* MIXINS */
+
+	.ctl-button {
+		background: transparent;
+		border: 1px solid @child-color-grey;
+		padding: 7.5px;
+		text-align: center;
+		border-radius: 7.5px;
+		font-weight: 100;
+		color: white;
+		text-decoration: none;
+		
+		a { text-decoration: none; }
+	
+		span {
+			color: @child-color-red;
+			margin-left: 10px;
+			height: 100px;
+		}
+	
+		&:visited { color: white; }
+	
+		&:hover { color: white; }
+	}
+
+	.pete-gradient (@startColor, @endColor) {
+			background-color: @startColor;
+			background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+			background:  -webkit-linear-gradient(top, @startColor, @endColor);
+			background:   -moz-linear-gradient(top, @startColor, @endColor);
+			background:    -ms-linear-gradient(top, @startColor, @endColor);
+			background:     -o-linear-gradient(top, @startColor, @endColor);
+			background:      linear-gradient(top, @startColor, @endColor);
+	}
+
+	/*.make-a-reservation-button {
+		.pete-gradient(@child-color-grey-lite,@child-color-grey);
+		border-radius: 5px;
+		padding: 10px 7.5px;
+		color: black;
+		text-decoration: none;
+		text-transform: uppercase;
+	
+		&:visited { color: black; }
+	
+		&:hover {
+			.pete-gradient(@child-color-grey,@child-color-grey-lite);
+		}
+	}*/
+
+	.comment-content a:visited, .entry-content a:visited { color: black; }
+
+

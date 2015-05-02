@@ -1,0 +1,129 @@
+/* TABLETS UP */
+
+	/* because jetpack won't accept justify-content space-between */
+
+		.main-navigation div.nav-menu>ul,
+		.main-navigation ul.nav-menu,
+		.site-info,
+		.custom-post-type-list,
+		.custom-post-type-list li .cpt-button-wrap {
+				display: -webkit-box;
+				display: -moz-box;
+				display: -ms-flexbox;
+				display: -webkit-flex;
+				display: flex;
+			}
+
+
+		.main-navigation div.nav-menu>ul,
+		.main-navigation ul.nav-menu,
+		.site-info,
+		.custom-post-type-list,
+		.custom-post-type-list li .cpt-button-wrap {
+				justify-content: space-between;
+			}
+			
+		.main-navigation li {
+				flex-grow: 1;
+			}
+
+
+		.custom-post-type-list {
+				flex-wrap: wrap;
+			}
+
+		.archive .custom-post-type-list li {
+				 margin: 0 0 25px;
+			}
+
+	/* -------------------------------------- GENERAL -------------------------------------- */
+	/* -------------------------------------- SHELL -------------------------------------- */
+
+		/* HEADER */
+
+			.site-header { padding: 1.714285714rem 0; }
+
+		/* MAIN NAV */
+
+			.main-navigation {
+			
+				li {
+
+					&.menu-item-has-children:hover > a:before {
+						display: block;
+						position: absolute;
+						top: 21px;
+						left: 40%;
+						margin-left: 0;
+						content: '';
+						width: 0;
+						height: 0;
+						border-bottom: solid 10px @child-color-red;
+						border-left: solid 10px transparent;
+						border-right: solid 10px transparent;
+						z-index: 999999;
+					}
+
+					.sub-menu {
+						display: block;
+						margin-left: -13px;
+						margin-top: 10px;
+		
+						li {
+							text-align: center;
+							margin: 0;
+							padding: 0;
+							border-right: none;
+							&:first-of-type,
+							&:last-of-type { text-align: center; }
+				
+							a, a:hover { 
+								background-color: @child-color-red;
+								color: white;
+								font-size: 1rem;
+								line-height: 1rem;
+							}
+				
+							a:hover { 
+								background-color: white;
+								color: @child-color-red;
+							}
+						}
+					}
+				}
+			}
+
+		/* FOOTER */
+	
+			footer[role=contentinfo] {
+		
+				.site-info {
+					text-align: left;
+				}
+
+			}
+
+	/* --------------------------------------	PLUGIN STYLES	 --------------------------------------	*/
+
+	.gform_wrapper {
+		
+		#gform_submit_button_1 {
+		
+			&:before,
+			&:after, {
+				display: inline-block;
+			}
+		}
+	}
+
+	/* -------------------------------------- PAGE SPECIFIC STYLES -------------------------------------- */
+		/*	HOME PAGE STYLES	*/
+
+		.page-template-front-page {
+	
+				.custom-post-type-list li {
+						width: 25%;
+						min-height: 375px;
+						margin-bottom: 0;
+				}
+		}
